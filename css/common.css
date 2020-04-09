@@ -1,0 +1,44 @@
+@import (Railway-Light.ttf);
+
+*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-size:inherit; color:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; }
+ul { list-style:none; }
+p, span, a { font-size:18px; color:#222; }
+body, header { min-width:300px; }
+
+header { position:fixed; top:0; left:0; display:inline-block; width:300px; padding:40px; z-index:100; background:#fff; }
+header a { display:block; width:100%; padding:5px 0; }
+header a.a { margin-bottom:25px; }
+header a.a span { font-size:25px; }
+header a.b { position:absolute; top:0; right:0; display:none; width:60px; height:55px; }
+header a.b span { display:block; width:30px; height:1px; position:absolute; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); background:#222; transition:0.15s all ease-in-out; -webkit-transition:0.15s all ease-in-out; }
+header a.b span.b1 { top:20px; }
+header a.b span.b2 { top:27px; }
+header a.b span.b3 { top:34px; }
+
+nav { display:block; width:100%; white-space:nowrap; }
+nav a span { display:block; width:100%; position:relative; }
+nav a span:after { transition:0.15s all ease-in-out; -webkit-transition:0.15s all ease-in-out; content:''; position:absolute; width:12px; height:1px; background:#fff; left:0; bottom:0; display:inline-block; }
+nav a:hover span:after { background:#444; }
+
+article { display:block; width:100%; padding:40px 40px 40px 300px; }
+article img { display:block; margin:0 auto; max-width:1024px; width:100%; }
+
+@media screen and (max-width:640px) {
+	header, nav { width:100%; border-bottom:1px solid #ddd; background:rgba(255,255,255,.95); }
+	header { text-align:center; top:0; left:0; padding:0; }
+	header a { display:inline-block; }
+	header a.a { padding:14px 15px 15px; margin-bottom:0; }
+	header a.a span { font-size:18px; }
+	header a.b { display:inline-block; }
+	
+	article { padding:55px 0 0 0; }
+	
+	nav { display:block; position:absolute; left:0; top:55px; height:0; border-bottom:1px solid #ddd; overflow:hidden; opacity:0; transition:0.15s all ease-in-out; -webkit-transition:0.15s all ease-in-out; }
+	header.on nav { display:block; height:42px; opacity:1; }
+	nav a { display:inline-block; width:auto; padding:10px 25px; }
+	nav a span { font-size:15px; }
+	nav a span:after { display:none; }
+	header.on a.b span.b1 { transform:rotate(45deg); -webkit-transform:rotate(45deg); left:25%; top:50%; }
+	header.on a.b span.b2 { width:0; }
+	header.on a.b span.b3 { transform:rotate(-45deg); -webkit-transform:rotate(-45deg); left:25%; top:50%; }
+}
