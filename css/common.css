@@ -69,9 +69,10 @@ a.btn.i { width:37%; }
 	header.on a.b span.b2 { width:0; }
 	header.on a.b span.b3 { transform:rotate(-45deg); -webkit-transform:rotate(-45deg); }
 	
-	article div.wrap h1 { font-size:16px; padding-top:20px; margin-bottom:5px; }
+	article div.wrap h1 { font-size:16px; padding-top:20px; margin-bottom:20px; }
 	article div.wrap h1:after { position:absolute; content:''; display:inline-block; left:50%; top:50px; transform:translateX(-50%); width:10px; height:1px; background:#666; }
-	article div.wrap div.inner { padding:15px; }
+	article div.wrap div.inner { padding:0 15px 15px; }
 	
 	form.gform label { display:none; }
+	a.btn:hover, form.gform button:hover { background:#fff; }
 }
