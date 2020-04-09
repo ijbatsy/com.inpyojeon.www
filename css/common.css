@@ -2,8 +2,10 @@
 
 *, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; }
 ul { list-style:none; }
-p, span, a { font-size:18px; }
+p, span, a, input, textarea, label { font-size:18px; }
 body, header { min-width:240px; }
+fieldset, label { border:0; display:block; }
+button { background:none; }
 
 header { position:fixed; top:0; left:0; display:inline-block; width:240px; padding:40px; z-index:100; background:#fff; }
 header a { display:block; width:100%; padding:5px 0; }
@@ -24,14 +26,30 @@ article { display:block; width:100%; padding:40px 120px 40px 240px; }
 article div.wrap { display:block; margin:0 auto; max-width:1200px; width:100%; }
 article div.wrap img { width:auto; max-width:100%; }
 article div.wrap img.center { display:block; margin-left:auto; margin-right:auto; }
+article div.wrap p.center { text-align:center; }
+article div.wrap h1 { position:relative; font-size:25px; display:block; width:100%; text-align:center; margin-bottom:40px; padding:5px 0; }
+article div.wrap div.inner { position:relative; display:block; width:100%; }
+article div.wrap div.inner.con { max-width:800px; margin:0 auto; }
 
-article div.wrap h1 { position:relative; font-size:25px; display:block; width:100%; text-align:center; margin-bottom:40px; }
+form.gform { display:block; margin-bottom:20px; }
+form.gform fieldset.h { display:none; }
+form.gform button, form.gform input, form.gform textarea { display:block; width:100%; margin-bottom:15px; }
+form.gform button { cursor:pointer; }
+a.btn, form.gform button { background:#fff; transition:0.15s all ease-in-out; -webkit-transition:0.15s all ease-in-out; }
+a.btn:hover, form.gform button:hover { background:#eee; }
+a.btn, form.gform button, form.gform input, form.gform textarea { border:1px solid #aaa; border-radius:5px; padding:10px; }
+a.btn { display:inline-block; }
+a.btn span { display:block; width:100%; text-align:center; }
+a.btn.e { width:60%; margin-right:3%; }
+a.btn.i { width:37%; }
 
 @media screen and (max-width:1200px) {
 	article { padding-right:60px; }
 }
 
 @media screen and (max-width:800px) {
+	p, span, a, button, input, textarea { font-size:14px; }
+	
 	header, nav { width:100%; border-bottom:1px solid #ddd; background:rgba(255,255,255,.95); }
 	header { text-align:center; top:0; left:0; padding:0; }
 	header a { display:inline-block; }
@@ -51,6 +69,9 @@ article div.wrap h1 { position:relative; font-size:25px; display:block; width:10
 	header.on a.b span.b2 { width:0; }
 	header.on a.b span.b3 { transform:rotate(-45deg); -webkit-transform:rotate(-45deg); }
 	
-	article div.wrap h1 { font-size:16px; padding-top:20px; margin-bottom:30px; }
+	article div.wrap h1 { font-size:16px; padding-top:20px; margin-bottom:5px; }
 	article div.wrap h1:after { position:absolute; content:''; display:inline-block; left:50%; top:50px; transform:translateX(-50%); width:10px; height:1px; background:#666; }
+	article div.wrap div.inner { padding:15px; }
+	
+	form.gform label { display:none; }
 }

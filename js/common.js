@@ -7,6 +7,7 @@ function c(){
 
 function l(){
 	var d = $(this).data('link') + ".html";
+	$('header').removeClass('on');
 	$.ajax({ url: d, success: o });
 	return false;
 }

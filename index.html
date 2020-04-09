@@ -22,9 +22,44 @@
 </header>
 <article>
 	<div class="wrap">
-		<h1>About</h1>
-		<img src="img/sample.jpg" class="center">
-		<img src="img/sample.jpg" class="center">
+		<h1>Contact</h1>
+		<div class="inner con">
+			<form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzrPE3lxShbCzn8sJVFsPVIkgqdR8UUe0KEVK5h6Q/exec">
+				<div class="form-elements">
+					<fieldset>
+						<input id="name" name="name" placeholder="Name">
+					</fieldset>
+		
+					<fieldset>
+						<textarea id="message" name="message" rows="10"
+						placeholder="Message"></textarea>
+					</fieldset>
+		
+					<fieldset>
+						<input id="email" name="email" type="email" value="" required placeholder="Your Email">
+					</fieldset>
+		
+					<fieldset class="h">
+						<input id="honeypot" type="text" name="honeypot" value="">
+					</fieldset>
+		
+					<button><span>Send Message</span></button>
+				</div>
+
+				<div class="thankyou_message" style="display:none;">
+					<p>Thank you.<br>I will get back to you soon.</p>
+				</div>
+			</form>
+			
+			<script data-cfasync="false" src="js/form-submission-handler.js"></script>
+			
+			<p>Or in case you want to contact me directly,</p>
+			<br>
+			<a href="mailto:inpyojeon@kakao.com" class="btn e"><span>Email<br>inpyojeon@kakao.com</span></a><a href="https://www.instagram.com/ijdays/" target="_blank" class="btn i"><span>Instagram<br>@ijdays</span></a>
+		</div>
+		
+		<!-- <img src="img/sample.jpg" class="center">
+		<img src="img/sample.jpg" class="center"> -->
 	</div>	
 </article>
 </body>
