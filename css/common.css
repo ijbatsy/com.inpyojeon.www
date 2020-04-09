@@ -1,11 +1,11 @@
 @import (Railway-Light.ttf);
 
-*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-size:inherit; color:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; }
+*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; }
 ul { list-style:none; }
-p, span, a { font-size:18px; color:#222; }
-body, header { min-width:300px; }
+p, span, a { font-size:18px; }
+body, header { min-width:240px; }
 
-header { position:fixed; top:0; left:0; display:inline-block; width:300px; padding:40px; z-index:100; background:#fff; }
+header { position:fixed; top:0; left:0; display:inline-block; width:240px; padding:40px; z-index:100; background:#fff; }
 header a { display:block; width:100%; padding:5px 0; }
 header a.a { margin-bottom:25px; }
 header a.a span { font-size:25px; }
@@ -20,10 +20,18 @@ nav a span { display:block; width:100%; position:relative; }
 nav a span:after { transition:0.15s all ease-in-out; -webkit-transition:0.15s all ease-in-out; content:''; position:absolute; width:12px; height:1px; background:#fff; left:0; bottom:0; display:inline-block; }
 nav a:hover span:after { background:#444; }
 
-article { display:block; width:100%; padding:40px 40px 40px 300px; }
-article img { display:block; margin:0 auto; max-width:1024px; width:100%; }
+article { display:block; width:100%; padding:40px 120px 40px 240px; }
+article div.wrap { display:block; margin:0 auto; max-width:1200px; width:100%; }
+article div.wrap img { width:auto; max-width:100%; }
+article div.wrap img.center { display:block; margin-left:auto; margin-right:auto; }
 
-@media screen and (max-width:640px) {
+article div.wrap h1 { position:relative; font-size:25px; display:block; width:100%; text-align:center; margin-bottom:40px; }
+
+@media screen and (max-width:1200px) {
+	article { padding-right:60px; }
+}
+
+@media screen and (max-width:800px) {
 	header, nav { width:100%; border-bottom:1px solid #ddd; background:rgba(255,255,255,.95); }
 	header { text-align:center; top:0; left:0; padding:0; }
 	header a { display:inline-block; }
@@ -38,7 +46,11 @@ article img { display:block; margin:0 auto; max-width:1024px; width:100%; }
 	nav a { display:inline-block; width:auto; padding:10px 25px; }
 	nav a span { font-size:15px; }
 	nav a span:after { display:none; }
-	header.on a.b span.b1 { transform:rotate(45deg); -webkit-transform:rotate(45deg); left:25%; top:50%; }
+	header.on a.b span.b1, header.on a.b span.b3 { left:25%; top:50%; }
+	header.on a.b span.b1 { transform:rotate(45deg); -webkit-transform:rotate(45deg); }
 	header.on a.b span.b2 { width:0; }
-	header.on a.b span.b3 { transform:rotate(-45deg); -webkit-transform:rotate(-45deg); left:25%; top:50%; }
+	header.on a.b span.b3 { transform:rotate(-45deg); -webkit-transform:rotate(-45deg); }
+	
+	article div.wrap h1 { font-size:16px; padding-top:20px; margin-bottom:30px; }
+	article div.wrap h1:after { position:absolute; content:''; display:inline-block; left:50%; top:50px; transform:translateX(-50%); width:10px; height:1px; background:#666; }
 }

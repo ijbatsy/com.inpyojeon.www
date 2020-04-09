@@ -12,6 +12,6 @@ function l(){
 }
 
 function o(result){
-	$('article').html(result);
+	$('article div.wrap').html(result);
 	return false;
 }
