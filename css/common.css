@@ -44,6 +44,8 @@ a.btn span { display:block; width:100%; text-align:center; }
 a.btn.e { width:60%; margin-right:3%; }
 a.btn.i { width:37%; }
 
+a.ul { text-decoration:underline; }
+
 @media screen and (max-width:1200px) {
 	article { padding-right:60px; }
 }
