@@ -1,6 +1,6 @@
 @import (Railway-Light.ttf);
 
-*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-weight:light; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; letter-spacing:0; }
+*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-weight:light; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; letter-spacing:0; -webkit-tap-highlight-color:transparent; }
 ul { list-style:none; } i { font-style:italic; }
 p, span, a, input, textarea { font-size:18px; }
 body, header { min-width:240px; }
