@@ -1,6 +1,6 @@
 @import (Railway-Light.ttf);
 
-*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; }
+*, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-weight:light; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; letter-spacing:0; }
 ul { list-style:none; } i { font-style:italic; }
 p, span, a, input, textarea { font-size:18px; }
 body, header { min-width:240px; }
@@ -24,13 +24,13 @@ nav a:hover span:after { background:#444; }
 
 article { display:block; width:100%; padding:40px 120px 40px 240px; }
 article div.wrap { display:block; margin:0 auto; max-width:1200px; width:100%; }
-article div.wrap img { width:auto; max-width:100%; }
 article div.wrap img.center { display:block; margin-left:auto; margin-right:auto; }
 article div.wrap p.center { text-align:center; }
 article div.wrap h1 { position:relative; font-size:25px; display:block; width:100%; text-align:center; margin-bottom:40px; padding:5px 0; }
 article div.wrap div.inner { position:relative; display:block; width:100%; margin:0 auto; }
-article div.wrap div.inner.abo { max-width:1000px; }
+article div.wrap div.inner.abo, article div.wrap div.inner.boo { max-width:1000px; }
 article div.wrap div.inner.con { max-width:800px; }
+article div.wrap div.inner.boo h2 { font-size:24px; }
 
 form.gform { display:block; margin-bottom:20px; }
 form.gform fieldset.h { display:none; }
@@ -44,7 +44,31 @@ a.btn span { display:block; width:100%; text-align:center; }
 a.btn.e { width:60%; margin-right:3%; }
 a.btn.i { width:37%; }
 
-a.ul { text-decoration:underline; }
+a.uli { text-decoration:underline; font-style:italic; }
+
+ul.books, ul.books li, ul.books li h2, ul.books li div.testimo { display:block; width:100%; }
+ul.books li { border-bottom:1px dashed #aaa; padding-bottom:40px; margin-bottom:40px; }
+ul.books li p.author { font-size:16px; margin-bottom:20px; }
+ul.books li div.testimo { margin-bottom:40px; }
+ul.books li div.testimo p { text-align:center; font-style:italic; margin-bottom:10px; }
+ul.books li div.testimo p:LAST-CHILD { margin-bottom:0; }
+ul.books li p.desc { margin-bottom:20px; }
+ul.books li p.buy, ul.books li p.buy a { font-size:16px; }
+ul.books li p.buy a { text-decoration:underline; }
+
+.swiper-container { width:100%; height:auto; margin-bottom:40px; }
+.swiper-container.sub { margin-bottom:20px; }
+.swiper-slide a, .swiper-slide img { display:block; width:100%; }
+.swiper-pagination-bullet-active { background:#444; }
+.swiper-button-next:after, .swiper-button-prev:after { color:#444; }
+.swiper-pagination-bullet { width:10px; height:5px; border-radius:0; }
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction { bottom:5px; }
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled { pointer-events: auto; }
+
+.dim { display:none; width:100%; background:rgba(0,0,0,.8); height:100%; position:fixed; top:0; left:0; z-index:200; font-size:0; }
+.lb { display:block; width:90%; max-width:640px; height:auto; top:50%; left:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); position:absolute; }
+.lb .swiper-container.sub, .closelb, .closelb span { display:block; width:100%; }
+.closelb span { font-size:18px; padding:10px; background:rgba(255,255,255,.8); text-align:center; border-radius:20px; }
 
 @media screen and (max-width:1200px) {
 	article { padding-right:60px; }
@@ -77,4 +101,15 @@ a.ul { text-decoration:underline; }
 	article div.wrap div.inner { padding:0 15px 15px; }
 	
 	a.btn:hover, form.gform button:hover { background:#fff; }
+	
+	article div.wrap div.inner.boo h2 { font-size:16px; }
+	ul.books li { padding-bottom:20px; margin-bottom:20px; }
+	ul.books li p.author { font-size:13px; margin-bottom:12px; }
+	ul.books li div.testimo { margin-bottom:20px; }
+	ul.books li div.testimo p { margin-bottom:5px; }
+	ul.books li p.desc { margin-bottom:10px; }
+	ul.books li p.buy, ul.books li p.buy a { font-size:12px; }
+	
+	.swiper-container { margin-bottom:20px; }
+	.swiper-button-next, .swiper-button-prev { display:none; }
 }
