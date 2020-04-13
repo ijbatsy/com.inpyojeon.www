@@ -2,9 +2,9 @@
 
 *, *:before, *:after { margin:0; padding:0; line-height:1.4; box-sizing:border-box; -webkit-box-sizing:border-box; font-weight:300; font-size:inherit; font-style:normal; text-decoration:none; font-family:'Raleway',sans-serif; color:#222; }
 ul { list-style:none; }
-p, span, a, input, textarea, label { font-size:18px; }
+p, span, a, input, textarea { font-size:18px; }
 body, header { min-width:240px; }
-fieldset, label { border:0; display:block; }
+fieldset { border:0; display:block; }
 button { background:none; }
 
 header { position:fixed; top:0; left:0; display:inline-block; width:240px; padding:40px; z-index:100; background:#fff; }
@@ -73,6 +73,5 @@ a.btn.i { width:37%; }
 	article div.wrap h1:after { position:absolute; content:''; display:inline-block; left:50%; top:50px; transform:translateX(-50%); width:10px; height:1px; background:#666; }
 	article div.wrap div.inner { padding:0 15px 15px; }
 	
-	form.gform label { display:none; }
 	a.btn:hover, form.gform button:hover { background:#fff; }
 }
