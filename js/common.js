@@ -1,17 +1,47 @@
-$(document).on('click', 'a.b', c).on('click', 'nav a', l).on('click', '.swiper-slide a', b).on('click', '.closelb', cl);
+$(document).on('click', 'a.b', c).on('click', 'nav a', l).on('click', '.swiper-slide a', b).on('click', '.closelb', cl).on('click', '.dim', dimcl);
+$(window).on('popstate', p).on('unload', ref);
+
+function ref(){
+	window.history.go();
+}
+
+function p(e){
+	if(history.state)
+		aj(history.state.data);
+	else
+		ajcl();
+}
+
+function ajcl(){
+	$('article div.wrap').html('');
+}
+
+function dimcl(e){
+	if(!$(e.target).parents().hasClass('swiper-container')) cl();
+}
 
 function c(){
 	$('header').toggleClass('on');
 }
 
 function l(){
-	var d = $(this).data('link') + ".html";
+	var d = $(this).data('link');
+	aj(d);
+}
+
+function aj(d){
+	if(!history.state || history.state.data!=d)
+		history.pushState({data: d}, null, '');
 	$('header').removeClass('on');
-	$.ajax({ url: d, success: o });
+	$.ajax({ url: d+'.html', success: o, complete: h });
 }
 
 function o(result){
 	$('article div.wrap').html(result);
+}
+
+function h(data){
+	if($('form').length > 0) loaded();
 }
 
 function b(){
